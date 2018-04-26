@@ -12,4 +12,12 @@ describe('landing page', function(){
       expect(res).to.have.status(200)
     })
   })
+
+  it('should render welcome message', function(){
+    chai.request(app)
+    .get('/')
+    .end(function(err, res) {
+      expect(res).to.have.status(200)
+    })
+  })
 })
